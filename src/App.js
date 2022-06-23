@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import Search from './Components/Search';
 import './App.css';
 
 function App() {
+
+  const [images, setImages] = useState([]);
+  const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [imagesPerPage, setImagesPerPage] = useState(50);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        await fetch()
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+          })
+      } catch (e) {
+        console.log('error: ', e)
+      }
+    }
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search/>
     </div>
   );
 }
