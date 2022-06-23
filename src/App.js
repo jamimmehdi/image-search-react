@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 import Search from './Components/Search';
 import './App.css';
+import bannerURL from './banner.webp'
+import Banner from './Components/Banner';
 
 function App() {
 
   const [images, setImages] = useState([]);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
+  const [banner, setBanner] = useState(bannerURL)
   const [currentPage, setCurrentPage] = useState(1);
   const [imagesPerPage, setImagesPerPage] = useState(50);
 
@@ -26,7 +29,8 @@ function App() {
 
   return (
     <div className="App">
-      <Search/>
+      <Banner bannerLink={banner} bannerText={"Image Search"} bannerSubText={"10,00,000+ images from pixabay api"}/>
+      <Search />
     </div>
   );
 }
