@@ -1,6 +1,4 @@
-:root {
-
-}
+:root {}
 
 * {
     padding: 0;
@@ -57,12 +55,14 @@
 
 .input-wrapper {
     padding-right: 1rem;
+    min-width: 500px;
     border-radius: 10px;
     box-shadow: 0px 8px 20px rgb(0 0 0 / 6%);
     background-color: white;
 }
 
-.input-wrapper:hover, .input-wrapper:focus {
+.input-wrapper:hover,
+.input-wrapper:focus {
     border-width: 4px;
 }
 
@@ -73,7 +73,7 @@
 .search-input {
     border: none;
     height: 3.5rem;
-    width: 400px;
+    width: 100%;
     font-size: 1rem;
     padding-right: 1rem;
 }
