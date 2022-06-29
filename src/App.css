@@ -86,6 +86,9 @@
 .jumbotron-container {
     /* border: 1px solid black; */
     padding: 2rem 4rem;
+    background-color: white;
+    margin-top: 2rem;
+    
 }
 
 /* Category */
@@ -123,6 +126,11 @@
 }
 
 /* Images Container */
+
+.fixed {
+    position: sticky;
+    top: 0;
+}
 
 .images-container {
     display: flex;
